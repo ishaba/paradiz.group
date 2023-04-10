@@ -1,0 +1,21 @@
+{
+  "plugins": {
+    "posthtml-include": {
+      "root": "src"
+    },
+    "posthtml-expressions": {
+      "locals": {
+        "META_TITLE": "Paradiz Group",
+        "META_DESCRIPTION": "#",
+        "META_KEYWORDS": "#",
+        "META_OG_IMG_URL": "#",
+        "META_SITE_URL": "#",
+        "BRAND_COLOR": "#ffffff",
+        "CONTACT_EMAIL": "#",
+        "URL_TWITTER": "#",
+        "URL_INSTAGRAM": "#",
+        "URL_DISCORD": "#"
+      }
+    }
+  }
+}
