@@ -27,9 +27,40 @@
     <!-- <link rel="manifest" href="./assets/manifest.webmanifest" /> -->
     <meta name="theme-color" content="{{BRAND_COLOR}}" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400,500,600&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <video srd="assets/particle-01.mp4"></video>
+    <header class="video-header">
+      <video src="./assets/particles-01.mp4" autoplay loop playsinline muted></video>
+      <div class="viewport-header">
+        <div><img src="./assets/logo.png" alt="" /></div>
+        <h1>
+          Моя вселенная:
+          <span>Мастер ключей</span>
+        </h1>
+      </div>
+    </header>
+
+    <main></main>
+
+    <script>
+      var viewportHeader = document.querySelector('.viewport-header')
+
+      document.body.addEventListener('scroll', function (event) {
+        var opacity = (document.body.offsetHeight - document.body.scrollTop) / document.body.offsetHeight
+        var scale = (document.body.offsetHeight - document.body.scrollTop) / document.body.offsetHeight
+        document.documentElement.style.setProperty('--headerOpacity', opacity)
+        document.documentElement.style.setProperty('--headerScale', scale)
+      })
+    </script>
+
+    <div id="circle"></div>
   </body>
 </html>
